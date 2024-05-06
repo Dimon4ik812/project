@@ -2,7 +2,7 @@ import re
 
 
 def clear_names(file_name: str) -> list:
-    """функця для отчистки имен от лишних символов"""
+    """Функция для очистки имен от лишних символов"""
     new_names_list = list()
     with open("data/" + file_name) as names_file:  # открытие файла
         names_list = (
@@ -19,7 +19,7 @@ def clear_names(file_name: str) -> list:
 
 
 def is_cyrillic(name_item: str) -> bool:
-    """проверка на вхождение кириллицы в строку"""
+    """Проверка на вхождение кириллицы в строку"""
     return bool(re.search("[а-яА-я]", name_item))
 
 
